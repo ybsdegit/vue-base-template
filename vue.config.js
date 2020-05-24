@@ -5,7 +5,7 @@ const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
   lintOnSave: false,
-  baseUrl: BASE_URL,
+  publicPath: BASE_URL,
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
@@ -13,7 +13,7 @@ module.exports = {
   },
 
   // 打包时不生成 .map 文件 加快打包速度
-  procutionSourceMap: false
+  productionSourceMap: false,
 
   // 跨域配置
   devServer: {
