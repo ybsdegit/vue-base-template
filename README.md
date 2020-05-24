@@ -3,6 +3,9 @@
 ## Project setup
 ```
 npm install
+
+vue add element
+vue add axios
 ```
 
 ### Compiles and hot-reloads for development
