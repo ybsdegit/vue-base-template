@@ -27,6 +27,11 @@ export default [
         component: () => import('@/views/child.vue')
       }
     ]
+  },
+
+  {
+    path: '*',
+    component: () => import('@/views/404.vue')
   }
 
 ]

@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NODE_ENV === 'procution' ? 'iview-admin' : '/'
+const BASE_URL = process.env.NODE_ENV === 'production' ? 'iview-admin' : '/'
 
 const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
