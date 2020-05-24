@@ -4,7 +4,7 @@ const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
-  lintOnSave: false,
+  lintOnSave: true,
   publicPath: BASE_URL,
   chainWebpack: config => {
     config.resolve.alias
@@ -18,15 +18,16 @@ module.exports = {
   // 跨域配置
   devServer: {
     port: 3336,
-    proxy: { // 配置代理，解决跨域请求后台数据的问题
-      '/api': {
-        target: 'http://localhost:9000/api', // 后台接口
-        ws: true, // 是否跨域
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': ''
-        }
-      }
-    }
+    proxy: 'http://localhost:9000'
+    //   proxy: { // 配置代理，解决跨域请求后台数据的问题
+    //     '/api': {
+    //       target: 'http://localhost:9000/api', // 后台接口
+    //       ws: true, // 是否跨域
+    //       changeOrigin: true,
+    //       pathRewrite: {
+    //         '^/api': ''
+    //       }
+    //     }
+    //   }
   }
 }
