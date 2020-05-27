@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <AddTodo v-on:add-todo="addTodo" />
-    <todo v-bind:todos="todos" v-on:delete-todo="deleteTodo"/>
+    <todo v-bind:todos="todos" v-on:delete-todo="deleteTodo" />
   </div>
 </template>
 
@@ -19,8 +19,7 @@ export default {
   },
   data () {
     return {
-      todos: [
-      ]
+      todos: []
     }
   },
 
@@ -33,7 +32,8 @@ export default {
     }
   },
   created () {
-    axios.get('http://jsonplaceholder.typicode.com/todos?_limit=5')
+    axios
+      .get('http://jsonplaceholder.typicode.com/todos?_limit=5')
       .then(res => {
         console.log(res)
         this.todos = res.data

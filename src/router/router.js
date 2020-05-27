@@ -17,6 +17,11 @@ export default [
     component: () => import('@/views/argu.vue')
   },
 
+  {
+    path: '/users/register',
+    name: 'register',
+    component: () => import('@/views/user/register.vue')
+  },
   // 嵌套路由
   {
     path: '/parent',
@@ -33,5 +38,4 @@ export default [
     path: '*',
     component: () => import('@/views/404.vue')
   }
-
 ]

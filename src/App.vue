@@ -2,9 +2,6 @@
   <div id="app">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-    <div>
-      <el-button>el-button</el-button>
-    </div>
     <router-view/>
   </div>
 </template>
